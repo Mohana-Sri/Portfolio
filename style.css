@@ -48,8 +48,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
+
+.profile-pic {
+  width: 300px; /* Adjust size if needed */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 130px; /* Increase space between image and text */
+  margin-left: 80px;
+}
+
 
 .hero h2{
   font-weight: bold;
@@ -63,7 +72,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
@@ -237,9 +246,16 @@ body {
 
 
 /* Project Section Styling */
-#projects {
+#projects-container{
   text-align: center;
 }
+
+/* Project Title Alignment */
+.project-card h3 {
+  text-align: left !important; /* Aligns only the title to the left */
+  margin-bottom: 10px;
+}
+
 
 #projects .section-title {
   font-size: 2.2rem;
