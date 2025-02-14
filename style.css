@@ -1,0 +1,402 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #f9f9f9;
+}
+
+.nav-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover{
+  color: #ff6600;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2{
+  font-weight: bold;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #ff6600;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 20px; /* Space between skill items */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px; /* Ensures proper alignment */
+  margin: 0px auto; /* Centers the grid */
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between items */
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* Skill Item Styling */
+.skill-item {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px; /* Ensures equal height */
+}
+
+/* Skill Icons */
+.skill-item i {
+  font-size: 3rem;
+  color: #ff6600;
+}
+
+.skill-item h3 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+  }
+}
+
+
+
+
+/* Roadmap Container */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Timeline Item */
+.roadmap-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+/* Dot + Line Container */
+.dot-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px; /* Adjust spacing */
+  position: relative;
+}
+
+/* Bigger Dot Indicator */
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Connecting Line */
+.roadmap-line {
+  width: 2px;
+  height: 160px;
+  flex-grow: 1; /* Makes sure the line fully connects */
+  background: #ff6600;
+  margin: 0 auto;
+  position: absolute;
+  top: 14px; /* Ensures the line starts right from the dot */
+ /* Extends fully to the next dot */
+}
+
+/* Content Styling */
+.details {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Sub Details (CGPA, Percentage, GPA) */
+.sub-detail {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roadmap {
+      max-width: 90%;
+  }
+  .dot {
+      width: 12px;
+      height: 12px;
+  }
+  .roadmap-line {
+      height: 150px;
+  }
+  .details {
+      font-size: 1.1rem;
+  }
+}
+
+
+/* Project Section Styling */
+#projects {
+  text-align: center;
+}
+
+#projects .section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#projects .info-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Project Cards Container */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between project cards */
+  flex-wrap: wrap; /* Allows wrapping if needed */
+}
+
+/* Project Card Styling */
+.project-card {
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  min-height: 350px; /* Ensures all cards are the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .project-card {
+    flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%; /* 1 column on small screens */
+  }
+}
+
+
+
+
+/* Contact Section */
+#contact {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Contact Info - Single Row Layout */
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px; /* Spacing between items */
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contact-item:hover i {
+  transform: scale(1.2);
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-item a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  color: #ff6600;
+}
+
+/* Icon Colors */
+.contact-item .fa-map-marker-alt {
+  color: #ff6600;
+}
+
+.contact-item .fa-phone {
+  color: #28a745;
+}
+
+.contact-item .fa-envelope {
+  color: #dc3545;
+}
+
+/* Responsive Design - Stack Items on Smaller Screens */
+@media (max-width: 992px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Footer Social Icons */
+.social-icons a {
+  color: white; /* Makes the icons white */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Change color on hover */
+.social-icons a:hover {
+  color: #ff6600; /* Changes to orange on hover */
+}
+
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
